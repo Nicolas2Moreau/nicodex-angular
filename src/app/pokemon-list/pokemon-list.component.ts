@@ -7,6 +7,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
+  pokemons: any[] = [];
 
   constructor(
     private dataService: DataService
@@ -14,9 +15,18 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getPokemons()
-    .subscribe((response: any) =>{
-      console.log(response);
-    })
-  }
+      .subscribe((response: any) => {
+        console.log(response);
+      });
+    // .subscribe((response: any) => {
+    //   response.results.forEach((result: any) =>{
+    //     this.dataService.getPokemonData(result.name)
+    //     .subscribe((uniqResponse: any) => {
+    //       this.pokemons.push(uniqResponse);
+    //       console.log(this.pokemons)
+    //     });
+    //   });
 
+    // });
+  }
 }
