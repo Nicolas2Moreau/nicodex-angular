@@ -16,8 +16,15 @@ export class PokemonListComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getPokemons()
       .subscribe((response: any) => {
-        console.log(response);
+        // console.log(response);
+        response.results.forEach((result: any) =>{
+              this.dataService.getPokemonData(result.name)
+              .subscribe((uniqResponse: any) => {
+                this.pokemons.push(uniqResponse);
+                console.log(this.pokemons)
+              });
       });
+    });
     // .subscribe((response: any) => {
     //   response.results.forEach((result: any) =>{
     //     this.dataService.getPokemonData(result.name)

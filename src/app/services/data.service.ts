@@ -8,12 +8,12 @@ export class DataService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) { console.log('Connection.......OK')}
   // get pokemons
   getPokemons(){
     return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10');
   }
   getPokemonData(name: string){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon/${name}');
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/1');
   }
 }
