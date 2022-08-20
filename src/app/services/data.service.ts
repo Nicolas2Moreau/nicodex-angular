@@ -11,9 +11,9 @@ export class DataService {
   ) { console.log('Connection.......OK')}
   // get pokemons
   getPokemons(){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10');
+    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0');
   }
   getPokemonData(name: string){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon/1');
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/'+name);
   }
 }
