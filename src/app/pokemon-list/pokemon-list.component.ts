@@ -7,20 +7,19 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: any[] = [];
-
+  pokemons: any[] = [];     //local pokemons array init
   constructor(
     private dataService: DataService
   ) { }
 
   ngOnInit(): void {
-    this.dataService.getPokemons()
+    this.dataService.getPokemons()      //get pokemons objects
     .subscribe((response: any) => {
       response.results.forEach((result: any) =>{
-        this.dataService.getPokemonData(result.name)
+        this.dataService.getPokemonData(result.name)     
         .subscribe((uniqResponse: any) => {
           this.pokemons.push(uniqResponse);
-          console.log(this.pokemons)
+          // console.log(this.pokemons)
         });
       });
 
