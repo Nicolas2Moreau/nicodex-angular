@@ -4,15 +4,24 @@
     <!-- pokeCards code  -->
     <div class="card" *ngFor="let pokemon of pokemons">
         <img class="card-img" [src]="pokemon.sprites.front_default" alt="pokemon">
-        <h3>{{ pokemon.name }}</h3>
+        <h3 id="poke-name">{{ pokemon.name }}</h3>
+        <p>
+            <b># </b> {{ pokemon.id}}
+        </p>
         <p>
             <b>Type:</b> {{ pokemon.types[0].type.name}}
         </p>
         <p>
-            <b>Type:</b> {{ pokemon.types[0].type.name}}
+            <b>Health:</b> {{ pokemon.stats[0].base_stat}}
         </p>
         <p>
             <b>Height:</b> {{ pokemon.height}}
+        </p>
+        <p>
+            <b>Physical:</b> {{ pokemon.stats[1].base_stat}}
+        </p>
+        <p>
+            <b>Special:</b> {{ pokemon.stats[3].base_stat}}
         </p>
     </div>
 </div>
