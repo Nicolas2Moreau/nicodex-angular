@@ -24,4 +24,6 @@ export class PokemonListComponent implements OnInit {
         console.log(this.pokemons)
       });
   }
+
+  // make a getpokemon func  
 }
