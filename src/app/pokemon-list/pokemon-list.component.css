@@ -19,4 +19,12 @@
 #poke-name {
     letter-spacing: 2px;
 }
+.centered {
+    /* display: flex; */
+    padding-top: 7%;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    scale: 2;
+}
 /* TODO media for cards low resolution */

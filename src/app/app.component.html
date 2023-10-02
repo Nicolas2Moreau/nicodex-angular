@@ -1,3 +1,9 @@
 <!-- nicodex start -->
 <app-header></app-header>
-<app-pokemon-list></app-pokemon-list>
+<!-- <app-pokemon-list></app-pokemon-list> -->
+<nav>
+    <button class="btn"routerLink="/pokedex" routerLinkActive="active" ariaCurrentWhenActive="page">Pokeball Go!</button>
+    <button class="btn" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"> Accueil</button>
+    <button class="btn" routerLink="/videos" routerLinkActive="active" ariaCurrentWhenActive="page"> Videos</button>
+  </nav>
+  <router-outlet></router-outlet>
