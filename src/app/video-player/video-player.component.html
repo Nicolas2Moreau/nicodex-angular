@@ -1,0 +1,21 @@
+<p>video-player works!</p>
+
+<div  *ngIf="isLoading==false  else loader" class="pokemon-grid">
+    <!-- pokeCards code  -->
+ 
+    <video controls>
+        <source [src]="videoUrl" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+    <!-- <div width="60%" height="60%">
+        <video class="" [src]="videoData" alt="pokemon">
+        </video>
+    </div> -->
+
+</div>
+<ng-template #loader>
+<div class="centered">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true" style="font-size: 7em;"></i>
+</div>
+</ng-template>
