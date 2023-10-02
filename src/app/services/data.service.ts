@@ -67,7 +67,7 @@ export class DataService {
 // }
 
 getVideo(fileName: string): Observable<Blob> {
-  const apiUrl = `http://localhost:8000/play/${fileName}`;
+  const apiUrl = `https://rust-video-player.onrender.com/play/${fileName}`;
   return this.http.get(apiUrl, {responseType: 'blob' });
 }
 
